@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+echo "Adding crontab for unattended-upgrade ..."
+
+echo "0 0 * * * root /usr/bin/unattended-upgrade" >> /etc/crontab
+
+# can also use @daily syntax or use /etc/cron.daily
+
+echo "Starting supervisord ..."
+
+exec /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
+
