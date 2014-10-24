@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER itech@riseup.net
+MAINTAINER iTech <itech \at\ riseup.net>
 
 RUN apt-get update \
  && apt-get install -y supervisor unattended-upgrades \
